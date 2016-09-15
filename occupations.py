@@ -10,4 +10,11 @@ for i in ZeList:
 del occDict['Total']
 
 def randOcc():
-    
+    from random import randint
+    p = randint(0,1000)
+    t = 0
+    for key in occDict:
+        t += occDict[key]
+        if (t * 10) >= p:
+            return key
+print randOcc() 
